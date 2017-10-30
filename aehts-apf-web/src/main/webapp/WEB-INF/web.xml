@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <display-name>Submit Servlet</display-name>
+    <servlet>
+        <servlet-name>SubmitServlet</servlet-name>
+        <servlet-class>http.servlet.SubmitServlet</servlet-class>
+    </servlet>
+
+    <display-name>Admin Servlet</display-name>
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>http.servlet.AdminServlet</servlet-class>
+    </servlet>
+
+    <display-name>Config Servlet Servlet</display-name>
+    <servlet>
+        <servlet-name>ConfigServlet</servlet-name>
+        <servlet-class>http.servlet.ConfigServlet</servlet-class>
+    </servlet>
+
+    <!--servlet>
+        <servlet-name>ConfigServlet</servlet-name>
+        <servlet-class>uk.ac.ebi.rcloud.http.servlet.ConfigServlet</servlet-class>
+    </servlet-->
+
+    <!--servlet>
+        <servlet-name>InterceptorServlet</servlet-name>
+        <servlet-class>uk.ac.ebi.rcloud.http.servlet.InterceptorServlet</servlet-class>
+    </servlet-->
+
+    <!--servlet>
+        <servlet-name>GraphicsServlet</servlet-name>
+        <servlet-class>uk.ac.ebi.rcloud.http.servlet.GraphicsServlet</servlet-class>
+    </servlet-->
+
+    <!--servlet>
+        <servlet-name>RESTServlet</servlet-name>
+        <servlet-class>uk.ac.ebi.rcloud.http.servlet.RESTServlet</servlet-class>
+    </servlet-->
+
+    <!--servlet>
+        <servlet-name>RebindServlet</servlet-name>
+        <servlet-class>uk.ac.ebi.rcloud.http.servlet.RebindServlet</servlet-class>
+    </servlet-->
+
+    <servlet>
+        <servlet-name>jnlpbuilder</servlet-name>
+        <jsp-file>/jnlpbuilder.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SubmitServlet</servlet-name>
+        <url-pattern>/submit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ConfigServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+    <!--servlet-mapping>
+        <servlet-name>ConfigServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping-->
+
+    <!--servlet-mapping>
+        <servlet-name>InterceptorServlet</servlet-name>
+        <url-pattern>/interceptor/*</url-pattern>
+    </servlet-mapping-->
+
+    <!--servlet-mapping>
+        <servlet-name>GraphicsServlet</servlet-name>
+        <url-pattern>/graphics</url-pattern>
+    </servlet-mapping-->
+
+    <!--servlet-mapping>
+        <servlet-name>RESTServlet</servlet-name>
+        <url-pattern>/rest</url-pattern>
+    </servlet-mapping-->
+
+    <!--servlet-mapping>
+        <servlet-name>RebindServlet</servlet-name>
+        <url-pattern>/rebind</url-pattern>
+    </servlet-mapping-->
+
+
+    <!-- DAS integration -->
+    <servlet>
+        <servlet-name>mydasGxaServlet</servlet-name>
+        <servlet-class>ae3.service.MydasGxaServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mydasGxaServlet</servlet-name>
+        <url-pattern>/das/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EmptyCache</servlet-name>
+        <servlet-class>uk.ac.ebi.mydas.controller.EmptyCache</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EmptyCache</servlet-name>
+        <url-pattern>/das_flushcache</url-pattern>
+    </servlet-mapping>
+
+    <!--
+        <servlet>
+            <display-name>DasSources</display-name>
+            <servlet-name>DasSources</servlet-name>
+            <jsp-file>/DasSources.jsp</jsp-file>
+            <load-on-startup>0</load-on-startup>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>DasSources</servlet-name>
+            <url-pattern>/das/sources</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <display-name>DasTypes</display-name>
+            <servlet-name>DasTypes</servlet-name>
+            <jsp-file>/DasTypes.jsp</jsp-file>
+            <load-on-startup>0</load-on-startup>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>DasTypes</servlet-name>
+            <url-pattern>/das/types</url-pattern>
+        </servlet-mapping>
+    -->
+
+
+    <servlet-mapping>
+        <servlet-name>jnlpbuilder</servlet-name>
+        <url-pattern>/jaws/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>3</session-timeout>
+    </session-config>
+</web-app>
