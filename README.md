@@ -1,4 +1,3 @@
-# AEHTS-APF
-## ArrayExpressHTS - Automatic Processing Framework
-The framework automates processing of NGS HTS experiments in ArrayExpress Archive and makes life a bit easier.
+# ArrayExpressHTS - Automatic Processing Framework
+The APF automates computation of NGS HTS experiments in ArrayExpress Archive and makes life a bit easier.
 
